@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-7</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ── NAVBAR ── -->
+    <nav>
+      <div class="nav-logo">Ori<span>gin</span></div>
+
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <span class="nav-username">@johndoe</span>
+        <div class="nav-avatar">JD</div>
+      </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+      <div class="hero-text">
+        <span class="hero-tag">Design Studio</span>
+        <h1>Craft Ideas Into <em>Reality</em></h1>
+        <p>
+          We build digital products that are beautiful, fast, and made to last —
+          from early concept to polished launch.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary">Start a Project</button>
+          <button class="btn-outline">See Our Work</button>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <div class="hero-image-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
+            alt="Hero"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Live viewport hint -->
+    <div class="viewport-badge" id="vp-badge">Desktop</div>
+
+    <script>
+      const badge = document.getElementById("vp-badge");
+      function updateBadge() {
+        const w = window.innerWidth;
+        badge.textContent =
+          w <= 540 ? "Mobile" : w <= 900 ? "Tablet" : "Desktop";
+      }
+      updateBadge();
+      window.addEventListener("resize", updateBadge);
+    </script>
+  </body>
+</html>
